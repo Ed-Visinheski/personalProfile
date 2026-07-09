@@ -1,0 +1,141 @@
+.filebar {
+  position: fixed;
+  top: 0;
+  left: var(--sidebar-w);
+  height: var(--topbar-h);
+  width: calc(100vw - var(--sidebar-w));
+  background: #232323;
+  color: #d4d4d4;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid #252526;
+  z-index: 11;
+}
+
+.filebar-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 100%;
+  background: none;
+  border: none;
+  border-right: 1px solid #252526;
+  color: #d4d4d4;
+  cursor: pointer;
+}
+
+.filebar-toggle:hover {
+  background: #2a2d2e;
+}
+
+@media (max-width: 768px) {
+  .filebar-toggle {
+    display: flex;
+  }
+}
+
+.filebar-header {
+  padding: 0 16px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid #252526;
+}
+
+.filebar-title {
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.filebar-buttons {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  align-items: stretch;
+  overflow-x: auto;
+  padding-right: 12px;
+}
+
+.filebar-tab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 10px;
+  height: 100%;
+  background: #2c2c2c;
+  color: #969696;
+  border-right: 1px solid #252526;
+  font-size: 13px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s, color 0.2s;
+}
+
+.filebar-tab:hover {
+  background: #2a2d2e;
+  color: #d4d4d4;
+}
+
+.filebar-tab.active {
+  background: #1e1e1e;
+  color: #ffffff;
+  border-top: 1px solid #007acc;
+}
+
+.tab-icon {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.tab-icon.icon-cpp {
+  background: #519aba;
+}
+
+.tab-icon.icon-java {
+  background: #ea9518;
+}
+
+.tab-icon.icon-extensions {
+  background: #c586c0;
+  border-radius: 50%;
+}
+
+.tab-icon.icon-sourceControl {
+  background: #6a9955;
+  border-radius: 50%;
+}
+
+.tab-close {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 15px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: 4px;
+  opacity: 0.7;
+}
+
+.tab-close:hover {
+  opacity: 1;
+  background: #4b4b4b;
+}
+
+@media (max-width: 768px) {
+  .filebar-tab {
+    padding: 0 8px;
+    gap: 8px;
+  }
+
+  .tab-close {
+    padding: 6px;
+    font-size: 16px;
+  }
+}
