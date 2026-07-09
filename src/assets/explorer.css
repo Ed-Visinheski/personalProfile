@@ -11,7 +11,7 @@
   z-index: 9;
   font-size: 13px;
   user-select: none;
-  transform: translateX(-110%);
+  transform: translateX(-150%);
   transition: transform 0.2s ease;
 }
 
